@@ -17,7 +17,6 @@ class Post(models.Model):
         return self.title
 
 
-
 class Category(models.Model):
     name = models.CharField(max_length=155, unique=True)
     description = models.TextField()
