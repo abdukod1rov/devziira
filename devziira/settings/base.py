@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from urllib.parse import urlparse
 
+
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -43,10 +44,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'devziira.urls'
 
+TEMLPATES_DIR = os.path.join('templates')
+print(TEMLPATES_DIR)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMLPATES_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
